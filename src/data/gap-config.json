@@ -1,0 +1,112 @@
+{
+  "version": "v1",
+  "config": {
+    "visState": {
+      "filters": [],
+      "layers": [
+        {
+          "id": "hotzone",
+          "type": "point",
+          "config": {
+            "dataId": "hotzone_data",
+            "label": "Hotzone",
+            "color": [
+              18,
+              147,
+              154
+            ],
+            "columns": {
+              "lat": "cent_lat",
+              "lng": "cent_lon",
+              "altitude": null
+            },
+            "isVisible": true,
+            "visConfig": {
+              "radius": 10,
+              "fixedRadius": false,
+              "opacity": 0.8,
+              "outline": false,
+              "thickness": 2,
+              "colorRange": {
+                "name": "Global Warming",
+                "type": "sequential",
+                "category": "Uber",
+                "colors": [
+                  "#5A1846",
+                  "#900C3F",
+                  "#C70039",
+                  "#E3611C",
+                  "#F1920E",
+                  "#FFC300"
+                ]
+              },
+              "radiusRange": [
+                0,
+                50
+              ],
+              "hi-precision": false
+            }
+          },
+          "visualChannels": {
+            "colorField": {
+              "name": "trip_distance",
+              "type": "real"
+            },
+            "colorScale": "quantile",
+            "sizeField": null,
+            "sizeScale": "linear"
+          }
+        }
+      ],
+      "interactionConfig": {
+        "tooltip": {
+          "fieldsToShow": {
+            "my_data": [
+              "VendorID",
+              "tpep_pickup_datetime",
+              "tpep_dropoff_datetime",
+              "passenger_count"
+            ]
+          },
+          "enabled": true
+        },
+        "brush": {
+          "size": 0.5,
+          "enabled": false
+        }
+      },
+      "layerBlending": "normal",
+      "splitMaps": []
+    },
+    "mapState": {
+      "bearing": 60,
+      "dragRotate": false,
+      "latitude": 33.7433,
+      "longitude": -84.3788,
+      "pitch": 60,
+      "zoom": 15,
+      "isSplit": false
+    },
+    "mapStyle": {
+      "styleType": "customStyle",
+      "topLayerGroups": {
+      },
+      "visibleLayerGroups": {
+        "label": true,
+        "road_path": true,
+        "border": false,
+        "building": true,
+        "water": true,
+        "land": true,
+        "park": true,
+        "att_pole": true,
+        "att_tree": true
+      },
+      "mapStyles": { "customStyle": {
+        "id": "customStyle",
+        "label": "GAP",
+        "url": "http://135.207.172.211/styles/custom-osm-bright/style.json"
+      }}
+    }
+  }
+}
