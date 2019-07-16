@@ -57,7 +57,7 @@ const CONFIG = {
 
   // Optional: Enables reading mapbox token from environment variable
   plugins: [
-    new webpack.EnvironmentPlugin({MAPBOX_ACCESS_TOKEN: 'pk.eyJ1IjoibG91aXNjdXJyaWUiLCJhIjoiY3MwR3B3QSJ9._5UXyjEIY0YisuAz9c_tJA'})
+    new webpack.EnvironmentPlugin(['MapboxAccessToken'])
   ]
 };
 
